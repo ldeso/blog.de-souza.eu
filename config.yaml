@@ -1,7 +1,7 @@
 ---
 baseURL: https://blog.de-souza.eu
 languageCode: en-us
-title: Léo's Blog
+title: Léo’s Blog
 metaDataFormat: yaml
 rssLimit: 10
 copyright: 'Copyright © 2019 Léo De Souza - Except where otherwise noted, content

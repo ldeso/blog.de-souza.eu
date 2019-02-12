@@ -17,7 +17,7 @@
   <style>
     {{ partialCached "critical.css" . | safeCSS }}
 
-    {{ if eq .Title "Contact" }}
+    {{ if eq .Params.form true }}
     {{ partial "form.css" . | safeCSS }}
     {{ end }}
   </style>

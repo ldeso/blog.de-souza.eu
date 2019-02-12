@@ -7,7 +7,7 @@
 
   <ul>
     {{ range .Pages }}
-    <li>{{ .Date.Format "2006-01-02" }} — <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+    <li>{{ .Date.Format "2006-01-02" }} – <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
     {{ end }}
   </ul>
 </article>

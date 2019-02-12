@@ -1,0 +1,26 @@
+<form id="form" name="contact" method="POST" netlify>
+  <ul id="form-group">
+    <li class="form-item">
+      <label class="form-label" for="form-name">Name:</label>
+      <input id="form-name" class="form-input" type="text" name="name">
+    </li>
+    <li class="form-item">
+      <label class="form-label" for="form-email">Email:</label>
+      <input id="form-email" class="form-input" type="email" name="email" required>
+    </li>
+    <li class="form-item">
+      <label class="form-label" for="form-subject">Subject:</label>
+      <input id="form-subject" class="form-input" type="text" name="subject">
+    </li>
+    <li class="form-item">
+      <label class="form-label" for="form-message">Message:</label>
+      <textarea id="form-message" class="form-input" name="message" required></textarea>
+    </li>
+    <li class="form-item">
+      <div class="form-button" netlify-recaptcha></div>
+    </li>
+    <li class="form-item">
+      <button class="form-button" type="submit">Send</button>
+    </li>
+  </ul>
+</form>

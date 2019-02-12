@@ -4,13 +4,13 @@ languageCode: en-us
 title: Léo’s Blog
 metaDataFormat: yaml
 rssLimit: 10
-copyright: 'Copyright © 2019 Léo De Souza - Except where otherwise noted, content
+copyright: 'Copyright © 2019 Léo De Souza – Except where otherwise noted, content
   on this site is licensed under a Creative Commons Attribution 4.0 International
   License (http://creativecommons.org/licenses/by/4.0/).
 
 '
 params:
-  footer: 'Copyright © 2019 Léo De Souza - Except where otherwise noted, content on
+  footer: 'Copyright © 2019 <a href="/contact/">Léo De Souza</a> – Except where otherwise noted, content on
     this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/"
     rel="license"> Creative Commons Attribution 4.0 International License</a>.
 

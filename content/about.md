@@ -5,4 +5,4 @@ menu:
     weight: 1
 
 ---
-This is my blog about all kinds of things.
+This is my blog about all kinds of things. [Contact me](/contact/).

@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<article itemscope itemtype="http://schema.org/Article">
+  {{ partial "headline.html" . }}
+
+  <div itemprop="articleBody text">
+    {{ .Content }}
+  </div>
+
+  {{ if eq .Type "posts" }}
+  {{ partial "keywords.html" . }}
+  {{ end }}
+</article>
+
+{{ partial "footer.html" . }}

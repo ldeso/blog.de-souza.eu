@@ -1,0 +1,10 @@
+<aside>
+  <ul class="keywords" itemprop="keywords">
+    {{ range .Param "tags" }}
+    {{ $name := . }}
+    {{ with $.Site.GetPage (printf "/tags/%s" ($name | urlize))}}
+    <li><a class="keywords-link" href="{{ .Permalink }}">{{ $name }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</aside>

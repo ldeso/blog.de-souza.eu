@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    {{ if eq .Title .Site.Title }}
+    {{ .Site.Title }}
+    {{ else }}
+    {{ with .Title }}{{.}} | {{ end }}{{ .Site.Title }}
+    {{ end }}
+  </title>
+  {{ range .AlternativeOutputFormats }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
+  {{ partialCached "styles.html" . }}
+  {{ .Hugo.Generator }}
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="container">
+      <ul id="navbar-menu">
+        <li class="navbar-item">
+          <a class="navbar-link" href="/">{{ .Site.Title }}</a>
+        </li>
+        {{ range .Site.Menus.main }}
+        <li class="navbar-item">
+          <a class="navbar-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+
+  <main id="content">
+    <div class="container">
+      <div class="padding">

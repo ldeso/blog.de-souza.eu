@@ -1,0 +1,18 @@
+      </div>
+    </div>
+  </main>
+
+  {{ with .Site.Params.footer }}
+  <footer id="footer">
+    <div class="container">
+      <div class="padding">
+        <p>
+          {{ . | safeHTML }}
+        </p>
+      </div>
+    </div>
+  </footer>
+  {{ end }}
+</body>
+
+</html>

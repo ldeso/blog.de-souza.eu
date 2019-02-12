@@ -5,4 +5,4 @@ menu:
     weight: 1
 
 ---
-This is my personal blog. [Contact me](/contact/).
+My name is Léo De Souza and this is where I write about my projects. [Contact me](/contact/).

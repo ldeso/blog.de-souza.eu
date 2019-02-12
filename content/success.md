@@ -1,5 +1,5 @@
 ---
-title: Thank You!
+title: Thank you!
 
 ---
 Your message has been submitted.

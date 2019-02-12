@@ -19,7 +19,7 @@ sections:
   path: content
   label: Pages
   create: all
-  match: "**/_index.md"
+  match: "{*,**/_index.md}"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''

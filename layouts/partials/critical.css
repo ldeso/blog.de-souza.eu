@@ -18,7 +18,7 @@ body {
 }
 
 #navbar {
-  background: darkslategray;
+  background: {{ $.Site.Params.color }};
 }
 
   #navbar-menu {
@@ -94,7 +94,7 @@ body {
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background: darkslategray;
+      background: {{ $.Site.Params.color }};
       display: block;
       border-radius: 0.2rem;
       padding: 0 0.4rem;

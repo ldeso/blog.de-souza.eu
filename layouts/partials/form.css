@@ -30,6 +30,10 @@
     height: 5rem;
   }
 
-  .form-button {
+  #form-captcha {
+    margin: auto;
+  }
+
+  #form-button {
     margin-left: auto;
   }

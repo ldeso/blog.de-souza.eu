@@ -16,11 +16,9 @@ sections:
 - type: document
   path: content/posts/_index.md
   label: Archive
-  match: "**/*"
 - type: document
   path: content/tags/_index.md
   label: Tags
-  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''

@@ -10,8 +10,6 @@ sections:
   create: documents
   match: "*"
   exclude: _index.md
-  templates:
-  - post
 - type: document
   path: content/about.md
   label: About

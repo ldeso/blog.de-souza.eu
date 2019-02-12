@@ -11,9 +11,8 @@ sections:
   match: "*"
   exclude: _index.md
 - type: document
-  path: about.md
+  path: content/about.md
   label: About
-  match: "**/*"
 - type: directory
   path: content
   label: Pages

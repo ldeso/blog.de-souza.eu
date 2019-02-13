@@ -7,7 +7,7 @@
     {{ .Content }}
   </div>
 
-  {{ if eq .Type "posts" }}
+  {{ if .Params.tags }}
   {{ partial "keywords.html" . }}
   {{ end }}
 </article>

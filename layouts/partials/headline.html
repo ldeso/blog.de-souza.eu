@@ -3,7 +3,7 @@
     <a class="headline-link" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
   </h1>
 
-  {{ if .Params.date }}
+  {{ if not .PublishDate.IsZero }}
   <p class="headline-meta">
     <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="datePublished">
       {{ .PublishDate.Format "2 January, 2006" }}

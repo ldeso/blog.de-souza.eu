@@ -1,21 +1,36 @@
----
 baseURL: https://blog.de-souza.eu
-languageCode: en-us
 title: Léo’s Blog
-metaDataFormat: yaml
+languageCode: en-gb
 rssLimit: 10
-copyright: 'Copyright © 2019 Léo De Souza – Except where otherwise noted, content
-  on this site is licensed under a Creative Commons Attribution 4.0 International
-  License (http://creativecommons.org/licenses/by/4.0/).
+copyright: Copyright © 2019 Léo De Souza – Except where otherwise noted,
+  content on this site is licensed under a Creative Commons Attribution 4.0
+  International License (http://creativecommons.org/licenses/by/4.0/).
 
-'
 params:
   color: darkslategray
-  footer: 'Copyright © 2019 <a href="/contact/">Léo De Souza</a> – Except where otherwise noted, content on
-    this site is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/"
-    rel="license"> Creative Commons Attribution 4.0 International License</a>.
+  footer: Copyright © 2019 <a href="/contact/">Léo De Souza</a> – Except where
+    otherwise noted, content on this site is licensed under a
+    <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+    Creative Commons Attribution 4.0 International License</a>.
 
-'
+menu:
+  main:
+  - name: About
+    url: /about/
+    weight: 1
+  - name: Archive
+    url: /archive/
+    weight: 2
+  - name: Tags
+    url: /tags/
+    weight: 3
+  - name: RSS
+    url: /index.xml
+    weight: 4
+
+taxonomies:
+  tag: tags
+
 privacy:
   disqus:
     disable: true
@@ -29,10 +44,3 @@ privacy:
     disable: true
   youtube:
     disable: true
-taxonomies:
-  tag: tags
-menu:
-  main:
-  - name: RSS
-    url: /index.xml
-    weight: 4

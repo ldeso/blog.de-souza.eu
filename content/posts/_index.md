@@ -1,10 +1,8 @@
 ---
 title: Archive
-url: "/archive/"
+url: /archive/
 outputs:
-- html
-menu:
-  main:
-    weight: 2
-
+  - html
+type: page
 ---
+

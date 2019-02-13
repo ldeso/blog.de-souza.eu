@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ range where .Pages "Type" "posts" }}
+{{ range where .Pages "Type" "post" }}
 <article itemscope itemtype="http://schema.org/Article">
   {{ partial "headline.html" . }}
 

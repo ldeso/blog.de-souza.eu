@@ -1,9 +1,7 @@
 ---
 title: Tags
 outputs:
-- html
-menu:
-  main:
-    weight: 3
-
+  - html
+type: page
 ---
+

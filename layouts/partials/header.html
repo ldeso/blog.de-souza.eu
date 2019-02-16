@@ -16,8 +16,8 @@
   {{ end }}
   <style>
     {{ partialCached "critical.css" . | safeCSS }}
-    {{ if .Params.form }}
-    {{ partial "form.css" . | safeCSS }}
+    {{ range .Params.css }}
+    {{ partial . | safeCSS }}
     {{ end }}
   </style>
   {{ .Hugo.Generator }}

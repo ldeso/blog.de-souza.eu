@@ -18,7 +18,7 @@ body {
 }
 
 #navbar {
-  background: {{ $.Site.Params.color }};
+  background: {{ .Site.Params.Color }};
 }
 
   #navbar-menu {
@@ -30,22 +30,16 @@ body {
     padding: 0;
   }
 
-  .navbar-item:nth-child(1) {
+  .navbar-item:first-child {
     flex-grow: 1;
-    order: 4;
   }
 
-  .navbar-item:nth-child(2) {
-    order: 3;
+  {{ $len := len .Site.Menus.main }}
+  {{ range seq $len }}
+  .navbar-item:nth-child({{.}}) {
+    order: {{ . | sub $len | add 1 }};
   }
-
-  .navbar-item:nth-child(3) {
-    order: 2;
-  }
-
-  .navbar-item:nth-child(4) {
-    order: 1;
-  }
+  {{ end }}
 
   .navbar-link {
     font-weight: bold;
@@ -94,7 +88,7 @@ body {
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background: {{ $.Site.Params.color }};
+      background: {{ .Site.Params.Color }};
       display: block;
       border-radius: 0.2rem;
       padding: 0 0.4rem;

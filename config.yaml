@@ -9,8 +9,8 @@ copyright: Copyright © 2019 Léo De Souza – Except where otherwise noted,
 
 params:
   color: darkslategray
-  footer: Copyright © 2019 <a href="/contact/">Léo De Souza</a> – Except where
-    otherwise noted, content on this site is licensed under a
+  footer: Copyright © 2019 <a href="/contact/" rel="author">Léo De Souza</a> –
+    Except where otherwise noted, content on this site is licensed under a
     <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
     Creative Commons Attribution 4.0 International License</a>.
 

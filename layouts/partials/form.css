@@ -1,9 +1,9 @@
-#form {
+.form {
   max-width: 30rem;
   margin: 1.5rem auto;
 }
 
-  #form-group {
+  .form-group {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,11 +25,11 @@
     flex-basis: 15rem;
   }
 
-  #form-message {
+  .form-textbox {
     resize: vertical;
     height: 5rem;
   }
 
-  #form-button {
+  .form-button {
     margin-left: auto;
   }

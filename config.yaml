@@ -32,6 +32,10 @@ menu:
 taxonomies:
   tag: tags
 
+outputs:
+  taxonomy:
+  - HTML
+
 privacy:
   disqus:
     disable: true

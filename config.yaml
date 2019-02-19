@@ -34,7 +34,7 @@ taxonomies:
 
 outputs:
   taxonomy:
-  - HTML
+  - html
 
 privacy:
   disqus:

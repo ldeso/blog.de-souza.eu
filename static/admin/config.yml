@@ -11,7 +11,7 @@ collections:
     label: Posts
     label_singular: Post
     folder: content/posts
-    filter: {field: type, value: post}
+    filter: {field: type, value: posts}
     create: true
     preview_path: posts/{{slug}}
     fields:
@@ -19,7 +19,7 @@ collections:
       - {name: date, label: Date, widget: datetime}
       - {name: body, label: Body, widget: markdown}
       - {name: tags, label: Tags, widget: list, required: false}
-      - {name: type, label: Type, widget: hidden, default: post}
+      - {name: type, label: Type, widget: hidden, default: posts}
   - name: pages
     label: Pages
     label_singular: Page
@@ -39,7 +39,6 @@ collections:
           - {name: body, label: Body, widget: markdown, required: false}
           - {name: url, label: URL, widget: hidden}
           - {name: outputs, label: Outputs, widget: hidden}
-          - {name: type, label: Type, widget: hidden}
       - file: content/tags/_index.md
         name: tags
         label: Tags
@@ -47,14 +46,13 @@ collections:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Body, widget: markdown, required: false}
           - {name: outputs, label: Outputs, widget: hidden}
-          - {name: type, label: Type, widget: hidden}
       - file: content/contact.md
         name: contact
         label: Contact
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Content, widget: markdown, required: false}
-          - {name: form, label: Form, widget: hidden}
+          - {name: css, label: CSS, widget: hidden}
       - file: content/success.md
         name: success
         label: Success

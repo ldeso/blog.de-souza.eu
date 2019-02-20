@@ -1,7 +1,7 @@
 ---
 title: Contact
 css:
-  - form.css
+  - contact.css
 ---
 To contact me, please use the following form:
 

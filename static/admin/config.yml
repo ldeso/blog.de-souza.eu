@@ -19,6 +19,8 @@ collections:
       - {name: date, label: Date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ"}
       - {name: body, label: Body, widget: markdown}
       - {name: tags, label: Tags, widget: list, required: false}
+      - {name: css, label: CSS, widget: list, required: false}
+      - {name: js, label: JS, widget: list, required: false}
       - {name: type, label: Type, widget: hidden, default: posts}
   - name: pages
     label: Pages
@@ -31,31 +33,44 @@ collections:
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Body, widget: markdown}
+          - {name: css, label: CSS, widget: list, required: false}
+          - {name: js, label: JS, widget: list, required: false}
       - file: content/posts/_index.md
         name: archive
         label: Archive
+        preview_path: 'posts/{{slug}}'
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Body, widget: markdown, required: false}
+          - {name: css, label: CSS, widget: list, required: false}
+          - {name: js, label: JS, widget: list, required: false}
           - {name: url, label: URL, widget: hidden}
           - {name: outputs, label: Outputs, widget: hidden}
       - file: content/tags/_index.md
         name: tags
         label: Tags
+        preview_path: 'tags/{{slug}}'
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Body, widget: markdown, required: false}
+          - {name: css, label: CSS, widget: list, required: false}
+          - {name: js, label: JS, widget: list, required: false}
           - {name: outputs, label: Outputs, widget: hidden}
       - file: content/contact.md
         name: contact
         label: Contact
+        preview_path: '{{slug}}'
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Content, widget: markdown, required: false}
-          - {name: css, label: CSS, widget: hidden}
+          - {name: css, label: CSS, widget: list, required: false}
+          - {name: js, label: JS, widget: list, required: false}
       - file: content/success.md
         name: success
         label: Success
+        preview_path: '{{slug}}'
         fields:
           - {name: title, label: Title, widget: string}
           - {name: body, label: Content, widget: markdown}
+          - {name: css, label: CSS, widget: list, required: false}
+          - {name: js, label: JS, widget: list, required: false}

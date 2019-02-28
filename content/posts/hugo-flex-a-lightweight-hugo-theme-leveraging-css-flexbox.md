@@ -94,13 +94,13 @@ menu:
 A contact form working with the built-in Netlify form handling service is inserted with the shortcode:
 
 ```
-{{< contact >}}
+{{ "{{< contact >}}" }}
 ```
 
 A custom success page URL may be given as a parameter:
 
 ```
-{{< contact "/success/" >}}
+{{ "{{< contact "/success/" >}}" }}
 ```
 
 ### On-Click Soundcloud Player
@@ -108,7 +108,7 @@ A custom success page URL may be given as a parameter:
 An on-click Soundcloud Player is inserted with the shortcode:
 
 ```
-{{< soundcloud 123456789 >}}
+{{ "{{< soundcloud 123456789 >}}" }}
 ```
 
 The parameter is a track ID and can be extracted from the "embed" sharing menu on the track webpage.
@@ -118,14 +118,14 @@ The parameter is a track ID and can be extracted from the "embed" sharing menu o
 Additional CSS and JS may be embedded with shortcodes. The code must be saved as a partial (e.g. `website/layout/partials/myscript.js`) and its filename must be added to the page-wide `.Scratch` variable. From within the shortcode template:
 
 ```html
-{{ slice "myscript.js" | .Page.Scratch.Add "js" }}
+{{ "{{ slice "myscript.js" | .Page.Scratch.Add "js" }}" }}
 ```
 
 As an example here is the shortcode template for the on-click Soundcloud player:
 
 ```html
-{{ slice "soundcloud.css" | .Page.Scratch.Add "css" }}
-{{ slice "soundcloud.js" | .Page.Scratch.Add "js" }}
+{{ "{{ slice "soundcloud.css" | .Page.Scratch.Add "css" }}" }}
+{{ "{{ slice "soundcloud.js" | .Page.Scratch.Add "js" }}" }}
 <div class="soundcloud" data-id="{{ .Get 0 }}"></div>
 ```
 

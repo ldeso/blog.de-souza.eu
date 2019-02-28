@@ -7,37 +7,31 @@ tags:
   - css
 type: posts
 ---
-Hugo Flex is the theme made for this blog, for use with the static site generator [Hugo](https://gohugo.io/).
+Hugo Flex is the theme of this blog, used with the static site generator [Hugo](https://gohugo.io/).
 
 As it is my first project with HTML and CSS, it was made with simplicity in mind and does not rely on any framework or external dependency.
 
-Whilst developing this theme I made some opinionated choices: I decided not to go with the "[Reset CSS](https://meyerweb.com/eric/tools/css/reset/)" approach and let the browsers decide for most basic styles (font sizes, paragraphs margins...); I went with the same [system font stack](https://css-tricks.com/snippets/css/system-font-stack/) as used by the Medium and Wordpress websites; I included all the CSS and Javascript code directly on every page; last, I did not care about old browsers and I used CSS3 to make the theme responsive. This allowed me not to include any javascript in the theme (except for optional [shortcodes](https://gohugo.io/content-management/shortcodes/)).
+While developing this theme I made some opinionated choices: I decided not to go with the "[Reset CSS](https://meyerweb.com/eric/tools/css/reset/)" approach and let the browsers decide on most of the basic styles (font sizes, paragraphs margins...); I went with the same [system font stack](https://css-tricks.com/snippets/css/system-font-stack/) used by Medium and Wordpress websites; I included all the CSS and Javascript code directly in each page; last, I did not care about compatibility with older browsers and used CSS3 to make the theme responsive. This allowed me not to include any javascript in the theme (except for optional [shortcodes](https://gohugo.io/content-management/shortcodes/)).
 
 Theme repository: https://github.com/de-souza/hugo-flex
 
 Official page: https://themes.gohugo.io/hugo-flex/
 
-# Hugo Flex
-
-A lightweight Hugo theme leveraging CSS Flexbox
-
-
 ## Features
 
-- Flexbox-based responsive layout
-- Full posts in RSS feed
-- Themed RSS feed
-- No framework
-- No javascript
-- 100% speed score on PageSpeed Insight
+* Flexbox-based responsive layout
+* Full posts in RSS feed
+* Themed RSS feed
+* No framework
+* No javascript
+* 100% speed score on PageSpeed Insight
 
 Optional features:
 
-- CSS and JS can be [dynamically embedded](#dynamically-embedded-css-and-js) with shortcodes
-- Built-in shortcodes:
-  - On-click Soundcloud player
-  - Netlify contact form
-
+* CSS and JS can be [dynamically embedded](#dynamically-embedded-css-and-js) with shortcodes
+* Built-in shortcodes:
+  * On-click Soundcloud player
+  * Netlify contact form
 
 ## Installation
 
@@ -52,7 +46,6 @@ The theme must be set in the website config:
 ```bash
 echo 'theme: hugo-flex' >> config.yaml
 ```
-
 
 ## Updating
 
@@ -94,7 +87,6 @@ menu:
     weight: 5
 ```
 
-
 ## Built-In Shortcodes
 
 ### Netlify Contact Form
@@ -120,7 +112,6 @@ An on-click Soundcloud Player is inserted with the shortcode:
 ```
 
 The parameter is a track ID and can be extracted from the "embed" sharing menu on the track webpage.
-
 
 ## Dynamically embedded CSS and JS
 

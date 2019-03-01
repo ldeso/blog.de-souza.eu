@@ -1,6 +1,10 @@
 ---
 title: One-Click Deep Learning VM for fast.ai
 date: '2019-03-01T10:00:11+01:00'
+tags:
+  - vm
+  - fastai
+  - jupyter
 type: posts
 ---
 In this post I will present the steps I used to set up a one-click deep-learning VM with Google Cloud Platform.
@@ -15,7 +19,7 @@ All commands below are sent after accessing the VM via SSH.
 
 ## Jupyter Notebook Configuration
 
-First, a SSL certificate is created to access the Notebook via HTTPS:
+First, a SSL certificate is generated to access the Notebook via HTTPS:
 
 ```
 mkdir certs
@@ -31,14 +35,14 @@ from IPython.lib import passwd
 passwd()
 ```
 
-This command takes a password and returns a cryptographic hash that will be saved in the Jupyter Notebook configuration. The configuration file is generated and edited:
+This command takes a password and returns a cryptographic hash that will be saved in the Jupyter Notebook configuration. This configuration file is generated and edited with the commands:
 
 ```
 jupyter notebook --generate-config
 nano ~/.jupyter/jupyter_notebook_config.py
 ```
 
-The following lines need to be uncommented and set up in the configuration file:
+The following lines need to be uncommented or added in the configuration file:
 
 ```
 c.NotebookApp.certfile = '/home/username/certs/mycert.pem'
@@ -47,11 +51,11 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.password = 'sha1:123456...789'
 ```
 
-Where `'sha1:123456...789'` is the hash returned by the `passwd()` command above.
+Where `username` is the username and `'sha1:123456...789'` is the hash returned by the `passwd()` command above.
 
 ## Systemd Configuration
 
-To be able to access the notebook directly when accessing the VM's IP address, its traffic need to be redirected from the default Jupyter Notebook port to 443. For this a first systemd service is created:
+To access the notebook directly from the VM's IP address, traffic needs to be redirected from the default Jupyter Notebook port to 443. A first systemd service is therefore created:
 
 ```
 sudo nano /etc/systemd/system/redirect-https.service
@@ -72,13 +76,13 @@ ExecStart=/sbin/iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --t
 WantedBy=multi-user.target
 ```
 
-A second file is created:
+To run Jupyter Notebook on startup and with the generated configuration, a second systemd service is created:
 
 ```
 sudo nano /etc/systemd/system/jupyter.service
 ```
 
-This simple service starts Jupyter Notebook with the previously generated config in the user home directory. Its content is the following:
+This simple service starts Jupyter Notebook with the previously generated configuration in the user home directory. It is edited as follows:
 
 ```
 [Unit]
@@ -100,4 +104,11 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-AA
+Finally, these two services need to be activated:
+
+```
+sudo systemctl enable redirect-https.service
+sudo systemctl enable jupyter.service
+```
+
+That's it! The VM can be started in one click from the Google Cloud Platform and Jupyter Notebook will be available at the VM's external IP address.

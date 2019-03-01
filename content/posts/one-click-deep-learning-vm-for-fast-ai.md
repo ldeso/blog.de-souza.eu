@@ -4,3 +4,11 @@ date: '2019-03-01T10:00:11+01:00'
 type: posts
 ---
 In this post I will present the steps I used to set up a one-click deep-learning VM with Google Cloud Platform.
+
+## Create the VM
+
+...
+
+## Set Up the VM
+
+...

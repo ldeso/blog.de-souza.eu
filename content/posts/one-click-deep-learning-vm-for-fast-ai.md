@@ -8,7 +8,7 @@ type: posts
 ---
 In this post I will present the steps I used to set up a deep-learning virtual machine ready in one click with Google Cloud Platform.
 
-## Creating the VM
+### Creating the VM
 
 Following the fast.ai course [recommendations](https://course.fast.ai/start_gcp.html), the VM is based on the `n1-highmem-8` machine type with a Nvidia Tesla P4 GPU. This GPU is not available in all regions -- I went with the region `us-central1-a`.
 
@@ -16,7 +16,7 @@ The boot disk size is set to 200 GB and the "Deep Learning Image" is installed; 
 
 All commands below are sent to the VM via SSH.
 
-## Jupyter Notebook Configuration
+### Jupyter Notebook Configuration
 
 First, a SSL certificate is generated to access the Notebook via HTTPS:
 
@@ -52,7 +52,7 @@ c.NotebookApp.password = 'sha1:123456...789'
 
 Where `username` is the username and `'sha1:123456...789'` is the hash returned by the `passwd()` command above.
 
-## Systemd Configuration
+### Systemd Configuration
 
 To access the notebook directly in HTTPS from the VM's IP address, traffic needs to be redirected from the default Jupyter Notebook port to port 443. A systemd service is created for this purpose:
 

@@ -51,13 +51,13 @@ c.NotebookApp.password = 'sha1:123456...789'
 
 Finally, to be able to access the notebook directly via the VM's IP address, it needs to be launched on the startup and its traffic need to be redirected from the default port to 443. For this two systemd services are created.
 
-The first one is created with the command:
+A first file is created:
 
 ```
 sudo nano /etc/systemd/system/redirect-https.service
 ```
 
-This oneshot service adds an iptable rule to redirect all incoming TCP traffic on port 443 to port 8888. Its content is as follows:
+This oneshot service adds an iptable rule to redirect all incoming TCP traffic on port 443 to Jupyter Notebook's default port. Its content is as follows:
 
 ```
 [Unit]
@@ -72,13 +72,13 @@ ExecStart=/sbin/iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --t
 WantedBy=multi-user.target
 ```
 
-The second file is created with the command:
+A second file is created:
 
 ```
 sudo nano /etc/systemd/system/jupyter.service
 ```
 
-AA
+This simple service starts Jupyter Notebook with the previously generated config in the user home directory. Its content is the following:
 
 ```
 [Unit]

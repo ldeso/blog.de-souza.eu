@@ -103,11 +103,11 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-Where `username` is replaced with the actual usename. Finally, both services are activated:
+Where `username` is replaced by the actual usename. Finally, both services are activated:
 
 ```
 sudo systemctl enable redirect-https.service
 sudo systemctl enable jupyter.service
 ```
 
-That's it! In one click, the VM is started from the Google Cloud Platform and Jupyter Notebook is available on its external IP address.
+That's it! In one click, the VM is started from the Google Cloud Platform console and Jupyter Notebook is available on the VM's external IP address.

@@ -41,7 +41,7 @@ jupyter notebook --generate-config
 nano ~/.jupyter/jupyter_notebook_config.py
 ```
 
-Four lines need to be added to the configuration file:
+Four lines are added to the configuration file:
 
 ```
 c.NotebookApp.certfile = '/home/username/certs/mycert.pem'
@@ -50,17 +50,17 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.password = 'sha1:123456...789'
 ```
 
-Where `username` is the username and `'sha1:123456...789'` is the hash returned by the `passwd()` command above.
+Where `username` is the actual username and `'sha1:123456...789'` is the hash returned by the `passwd()` command above.
 
 ### Systemd Configuration
 
-To access the notebook directly in HTTPS from the VM's IP address, traffic needs to be redirected from the default Jupyter Notebook port to port 443. A systemd service is created for this purpose:
+To access the notebook directly in HTTPS from the VM's IP address, traffic needs to be redirected from Jupyter Notebook's default port to port 443. A systemd service is created for this purpose:
 
 ```
 sudo nano /etc/systemd/system/redirect-https.service
 ```
 
-This oneshot service adds an iptable rule to redirect all TCP traffic from port 443 to Jupyter Notebook's default port 8888. The file is edited as follows:
+This oneshot service adds an iptable rule on startup to redirect all TCP traffic from port 443 to Jupyter Notebook's default port 8888. The file is edited as follows:
 
 ```
 [Unit]

@@ -81,7 +81,7 @@ To run Jupyter Notebook automatically on the VM startup, a second systemd servic
 sudo nano /etc/systemd/system/jupyter.service
 ```
 
-This simple service runs Jupyter Notebook with the previously generated configuration in the user home directory, and is edited as follows:
+This simple service runs Jupyter Notebook with the previously generated configuration in the user's home directory and is edited as follows:
 
 ```
 [Unit]

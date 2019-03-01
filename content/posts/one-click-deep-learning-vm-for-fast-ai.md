@@ -12,7 +12,7 @@ In this post I will present steps to set up a deep-learning virtual machine read
 
 Following the fast.ai course [recommendations](https://course.fast.ai/start_gcp.html), the VM is based on the `n1-highmem-8` machine type with a Nvidia Tesla P4 GPU. This GPU is not available in all regions -- I went with the region `us-central1-a`.
 
-The boot disk size is set to 200 GB and the "Deep Learning Image" is installed (this Debian-based image includes Anaconda, PyTorch and fastai). In the Management options, preemptibility is switched on.
+The boot disk size is set to 200 GB and the "Deep Learning Image" is installed (this image includes Anaconda, PyTorch and fastai). In the Management options, preemptibility is switched on.
 
 All commands below are sent to the VM via SSH.
 

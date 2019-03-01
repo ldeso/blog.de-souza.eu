@@ -8,7 +8,7 @@ tags:
   - deep learning
 type: posts
 ---
-In this post I will present the steps I used to set up a one-click deep-learning VMvirtual machine with Google Cloud Platform.
+In this post I will present the steps I used to set up a one-click deep-learning virtual machine with Google Cloud Platform.
 
 ## Creating the VM
 

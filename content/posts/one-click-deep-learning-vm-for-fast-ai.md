@@ -34,7 +34,7 @@ from IPython.lib import passwd
 passwd()
 ```
 
-This command takes a password and returns a cryptographic hash that will be saved in the Jupyter Notebook configuration. This configuration file is generated and edited with the commands:
+This command takes a password and returns a cryptographic hash that will be saved in the Jupyter Notebook configuration. This configuration file is then generated and edited with the commands:
 
 ```
 jupyter notebook --generate-config

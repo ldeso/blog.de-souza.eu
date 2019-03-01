@@ -81,7 +81,7 @@ To run Jupyter Notebook automatically on the VM startup, a second systemd servic
 sudo nano /etc/systemd/system/jupyter.service
 ```
 
-This simple service runs Jupyter Notebook with the previously generated configuration in the user home directory. It is edited as follows:
+This simple service runs Jupyter Notebook with the previously generated configuration in the user home directory, and is edited as follows:
 
 ```
 [Unit]
@@ -110,4 +110,4 @@ sudo systemctl enable redirect-https.service
 sudo systemctl enable jupyter.service
 ```
 
-That's it! The VM can be started in one click from the Google Cloud Platform and Jupyter Notebook will be available on its external IP address.
+That's it! In one click, the VM is started from the Google Cloud Platform and Jupyter Notebook is available on its external IP address.

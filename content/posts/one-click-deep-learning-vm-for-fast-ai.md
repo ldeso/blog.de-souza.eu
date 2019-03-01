@@ -26,7 +26,7 @@ cd certs
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
 ```
 
-A password is then created for Jupyter Notebook with IPython:
+Next, a password is created for Jupyter Notebook with IPython:
 
 ```
 ipython

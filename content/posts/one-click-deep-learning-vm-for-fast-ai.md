@@ -54,7 +54,7 @@ Where `username` is the actual username and `'sha1:123456...789'` is the hash re
 
 ### Systemd Configuration
 
-To access the notebook directly in HTTPS from the VM's IP address, traffic needs to be redirected from Jupyter Notebook's default port to port 443. A systemd service is created for this purpose:
+To access Jupyter Notebook directly from the VM's IP address, traffic needs to be redirected from the default port to port 443. A systemd service is created for this purpose:
 
 ```
 sudo nano /etc/systemd/system/redirect-https.service

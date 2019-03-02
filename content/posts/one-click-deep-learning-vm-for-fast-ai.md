@@ -6,7 +6,7 @@ tags:
   - Jupyter
 type: posts
 ---
-In this post I will present the steps I used to set up a deep learning virtual machine ready to use in one click with Google Cloud Platform.
+In this post I will present the steps I used to set up a deep learning virtual machine, ready to use in one click with Google Cloud Platform.
 
 ### Creating the VM
 

@@ -1,8 +1,10 @@
 baseURL: https://blog.de-souza.eu
 title: Léo’s Blog
 languageCode: en-gb
-rssLimit: 10
 theme: hugo-flex
+disableAliases: true
+preserveTaxonomyNames: true
+rssLimit: 10
 copyright: >
   Copyright © 2019 Léo De Souza – Except where otherwise noted, content on this
   site is licensed under a Creative Commons Attribution 4.0 International

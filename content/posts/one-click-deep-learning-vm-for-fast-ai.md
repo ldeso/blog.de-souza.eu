@@ -2,8 +2,8 @@
 title: One-Click Deep Learning VM for fast.ai
 date: '2019-03-01T10:00:11+01:00'
 tags:
-  - vm
-  - jupyter
+  - VM
+  - Jupyter
 type: posts
 ---
 In this post I will present steps to set up a deep-learning virtual machine ready in one click with Google Cloud Platform.

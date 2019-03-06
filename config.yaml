@@ -10,7 +10,7 @@ copyright: >
   License (http://creativecommons.org/licenses/by/4.0/).
 
 params:
-  color: darkcyan
+  color: darkslategray
   footer: >
     Copyright © 2019&#32;<a href="/contact/" rel="author">Léo De Souza</a> –
     Except where otherwise noted, content on this site is licensed under

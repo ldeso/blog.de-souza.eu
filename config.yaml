@@ -12,9 +12,9 @@ copyright: >
 params:
   color: darkslategray
   footer: >
-    Copyright © 2019&#32;<a href="/contact/" rel="author">Léo De Souza</a> –
-    Except where otherwise noted, content on this site is licensed under
-    a&#32;<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+    Copyright © 2019 &#32;<a href="/contact/" rel="author">Léo De Souza</a> –
+    Except where otherwise noted, content on this site is licensed under a
+    &#32;<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
     Creative Commons Attribution 4.0 International License</a>.
 
 menu:
@@ -36,7 +36,7 @@ taxonomies:
   tag: tags
 
 outputs:
-  taxonomy:
+  term:
   - html
 
 privacy:

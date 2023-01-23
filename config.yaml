@@ -4,12 +4,14 @@ languageCode: en-gb
 theme: hugo-flex
 rssLimit: 10
 preserveTaxonomyNames: true
+enableRobotsTXT: true
 copyright: >
   Copyright © 2019 Léo De Souza – Except where otherwise noted, content on this
   site is licensed under a Creative Commons Attribution 4.0 International
   License (http://creativecommons.org/licenses/by/4.0/).
 
 params:
+  description: This is where I write about my projects.
   color: darkslategray
   footer: >
     Copyright © 2019 &#32;<a href="/contact/" rel="author">Léo De Souza</a> –

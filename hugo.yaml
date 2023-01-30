@@ -13,6 +13,7 @@ copyright: >
 params:
   description: This is where I write about my projects.
   color: darkslategray
+  noClasses: false
   headingoffset: 2
   footer: >
     Copyright © 2019 &#32;<a href="/contact/" rel="author">Léo De Souza</a> –

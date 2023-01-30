@@ -35,6 +35,10 @@ menu:
       url: index.xml
       weight: 4
 
+markup:
+  highlight:
+    noClasses: false
+
 taxonomies:
   tag: tags
 

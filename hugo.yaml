@@ -1,6 +1,6 @@
 baseURL: https://blog.de-souza.eu
 title: Léo’s Blog
-languageCode: en-gb
+languageCode: en
 theme: hugo-flex
 rssLimit: 10
 preserveTaxonomyNames: true
@@ -13,6 +13,7 @@ copyright: >
 params:
   description: This is where I write about my projects.
   color: darkslategray
+  headingoffset: 2
   footer: >
     Copyright © 2019 &#32;<a href="/contact/" rel="author">Léo De Souza</a> –
     Except where otherwise noted, content on this site is licensed under a
@@ -21,25 +22,25 @@ params:
 
 menu:
   nav:
-  - name: About
-    url: about/
-    weight: 1
-  - name: Archive
-    url: archive/
-    weight: 2
-  - name: Tags
-    url: tags/
-    weight: 3
-  - name: RSS
-    url: index.xml
-    weight: 4
+    - name: About
+      url: about/
+      weight: 1
+    - name: Archive
+      url: archive/
+      weight: 2
+    - name: Tags
+      url: tags/
+      weight: 3
+    - name: RSS
+      url: index.xml
+      weight: 4
 
 taxonomies:
   tag: tags
 
 outputs:
   term:
-  - html
+    - html
 
 privacy:
   disqus:

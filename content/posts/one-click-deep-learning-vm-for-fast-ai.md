@@ -20,7 +20,7 @@ All commands below are sent to the VM via SSH.
 
 First, a SSL certificate is generated to access the Notebook via HTTPS:
 
-```
+```bash
 mkdir certs
 cd certs
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
@@ -28,7 +28,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out myce
 
 Next, a password is created for Jupyter Notebook with IPython:
 
-```
+```python
 ipython
 from IPython.lib import passwd
 passwd()
@@ -36,14 +36,14 @@ passwd()
 
 This command takes a password and returns a cryptographic hash that will be saved in the Jupyter Notebook configuration. This configuration file is then generated and edited with the commands:
 
-```
+```bash
 jupyter notebook --generate-config
 nano ~/.jupyter/jupyter_notebook_config.py
 ```
 
 Four lines are added to the configuration file:
 
-```
+```python
 c.NotebookApp.certfile = '/home/username/certs/mycert.pem'
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.open_browser = False
@@ -56,13 +56,13 @@ Where `username` is the actual username and `'sha1:123456...789'` is the hash re
 
 To access Jupyter Notebook directly from the VM's IP address, traffic needs to be redirected from the default port to port 443. A systemd service is created for this purpose:
 
-```
+```bash
 sudo nano /etc/systemd/system/redirect-https.service
 ```
 
 This oneshot service adds an iptable rule on startup to redirect all TCP traffic from port 443 to Jupyter Notebook's default port 8888. The file is edited as follows:
 
-```
+```systemd
 [Unit]
 Description=Redirect TCP from Port 443 to Port 8888
 
@@ -77,13 +77,13 @@ WantedBy=multi-user.target
 
 To run Jupyter Notebook automatically on the VM startup, a second systemd service is created:
 
-```
+```bash
 sudo nano /etc/systemd/system/jupyter.service
 ```
 
 This simple service runs Jupyter Notebook with the previously generated configuration in the user's home directory and is edited as follows:
 
-```
+```systemd
 [Unit]
 Description=Jupyter Notebook
 
@@ -105,7 +105,7 @@ WantedBy=multi-user.target
 
 Where `username` is replaced by the actual usename. Finally, both services are activated:
 
-```
+```bash
 sudo systemctl enable redirect-https.service
 sudo systemctl enable jupyter.service
 ```
